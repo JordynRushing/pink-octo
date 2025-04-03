@@ -37,10 +37,4 @@ body{
     animation: pop 0.5s ease-out 1.5s forwards;
   }
 
-  svg {
-    width: 100%;
-    display: block;
-    margin: 100px auto;
-    cursor: pointer;
-  }
   
