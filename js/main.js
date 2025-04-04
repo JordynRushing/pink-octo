@@ -1,1 +1,1 @@
-// JS scripts placed here
+const paws = ['paw1', 'paw2', 'paw3', 'paw4'];

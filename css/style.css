@@ -18,7 +18,18 @@ body{
   #paw4, #paw3, #paw2, #paw1 {
     transform-box: fill-box;
     transform-origin: center;
-    opacity: 100;
+    opacity: 1;
+  }
+
+  svg {
+    width: 100%;
+    max-width: 20000px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .pop {
+    animation: pop 0.5s ease-out forwards;
   }
 
   #paw4 {
@@ -37,4 +48,5 @@ body{
     animation: pop 0.5s ease-out 1.5s forwards;
   }
 
+  
   
