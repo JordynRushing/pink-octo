@@ -51,5 +51,49 @@ svg {
   animation: pop 2s ease-in-out 1.5s infinite;
 }
 
+pup {
+  position: absolute;
+  opacity: 0;
+}
 
+@keyframes wiggle {
+  0%, 100%   { transform: rotate(0deg); }
+  25%        { transform: rotate(5deg); }
+  75%        { transform: rotate(-5deg); }
+}
+
+#far-right-pup {
+  transform: translateY(-100%);
+  animation:
+    slide-in-right 1s ease-out 0s forwards,
+    wiggle 0.4s ease-in-out 1s forwards;
+}
+
+#center-pup {
+  transform: translateX(-100%);
+  animation:
+    slide-in-down 1s ease-out 0.5s forwards,
+    wiggle 0.4s ease-in-out 1.5s forwards;
+}
+
+#top-pup {
+  transform: translateX(-100%);
+  animation:
+    slide-in-down 1s ease-out 1s forwards,
+    wiggle 0.4s ease-in-out 2s forwards;
+}
+
+#left-pup {
+  transform: translateY(-100%);
+  animation:
+    slide-in-left 1s ease-out 1.5s forwards,
+    wiggle 0.4s ease-in-out 2.5s forwards;
+}
+
+#far-left-pup {
+  transform: translateY(-100%);
+  animation:
+    slide-in-left 1s ease-out 2s forwards,
+    wiggle 0.4s ease-in-out 3s forwards;
+}
 
