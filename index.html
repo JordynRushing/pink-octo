@@ -1067,5 +1067,23 @@
     </clipPath>
     </defs>
     </svg>
+    <script>
+      const pupIds = [
+        "far-right-pup",
+        "center-pup",
+        "top-pup",
+        "left-pup",
+        "far-left-pup"
+      ];
+    
+      pupIds.forEach(id => {
+        const pup = document.getElementById(id);
+        if (pup) {
+          pup.addEventListener("dblclick", () => {
+            pup.classList.add("hidden");
+          });
+        }
+      });
+    </script>
 </body>
 </html>

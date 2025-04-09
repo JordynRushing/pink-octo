@@ -97,3 +97,8 @@ pup {
     wiggle 0.4s ease-in-out 3s forwards;
 }
 
+.hidden {
+  opacity: 0 !important;
+  pointer-events: none;
+  transition: opacity 0.3s ease-out;
+}
