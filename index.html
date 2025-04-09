@@ -1068,22 +1068,20 @@
     </defs>
     </svg>
     <script>
-      const pupIds = [
-        "far-right-pup",
-        "center-pup",
-        "top-pup",
-        "left-pup",
-        "far-left-pup"
-      ];
+      const pupIds = ["far-right-pup", "center-pup", "top-pup", "left-pup", "far-left-pup"];
+      const box = document.getElementById("box");
     
       pupIds.forEach(id => {
         const pup = document.getElementById(id);
-        if (pup) {
-          pup.addEventListener("dblclick", () => {
-            pup.classList.add("hidden");
-          });
-        }
+        pup?.addEventListener("dblclick", () => {
+          pup.classList.add("hidden");
+    
+          // Trigger shuffle
+          box.classList.remove("shuffle");
+          void box.offsetWidth; // force reflow
+          box.classList.add("shuffle");
+        });
       });
     </script>    
-</body>
+      <head>
 </html>
