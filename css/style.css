@@ -10,43 +10,74 @@ body{
 
 
 @keyframes pop {
-    0%   { transform: scale(0); opacity: 0; }
-    50%  { transform: scale(1.2); opacity: 1; }
-    100% { transform: scale(1); }
-  }
+  0%   { transform: scale(1); opacity: 1; }
+  30%  { transform: scale(1.2); opacity: 1; }
+  50%  { transform: scale(0.9); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
 
-  #paw4, #paw3, #paw2, #paw1 {
-    transform-box: fill-box;
-    transform-origin: center;
-    opacity: 1;
-  }
+#paw4, #paw3, #paw2, #paw1 {
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 1;
+}
 
-  svg {
-    width: 100%;
-    max-width: 20000px;
-    display: block;
-    margin: 0 auto;
-  }
+#paw4 {
+  animation: pop 2s ease-in-out 0s infinite;
+}
 
-  .pop {
-    animation: pop 0.5s ease-out forwards;
-  }
+#paw3 {
+  animation: pop 2s ease-in-out 0.5s infinite;
+}
 
-  #paw4 {
-    animation: pop 0.5s ease-out 0s forwards;
-  }
+#paw2 {
+  animation: pop 2s ease-in-out 1s infinite;
+}
 
-  #paw3 {
-    animation: pop 0.5s ease-out 0.5s forwards;
-  }
+#paw1 {
+  animation: pop 2s ease-in-out 1.5s infinite;
+}
 
-  #paw2 {
-    animation: pop 0.5s ease-out 1s forwards;
-  }
 
-  #paw1 {
-    animation: pop 0.5s ease-out 1.5s forwards;
-  }
+#box {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  margin: 100px auto;
+  border: 4px dashed #ccc;
+  overflow: hidden;
+  background: #fdf6f0;
+}
 
-  
-  
+.pup {
+  position: absolute;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+  opacity: 0;
+}
+
+#center-pup {
+  left: 45%;
+  top: -100%;
+  animation-delay: 0.5s;
+}
+
+#top-pup {
+  left: 50%;
+  top: -100%;
+  animation-delay: 1s;
+}
+
+#left-pup {
+  left: -100%;
+  top: 60%;
+  animation-delay: 1.5s;
+}
+
+#far-left-pup {
+  left: -100%;
+  top: 30%;
+  animation-delay: 2s;
+}
+
+
+
